@@ -24,7 +24,7 @@ class Pokemon
       WHERE id = ?
     SQL
 
-    result = db.execute(sql, id)[0]
+    result = db.execute(sql, id)
     Pokemon.new(id, result[1], result[2], db)
   end
 
