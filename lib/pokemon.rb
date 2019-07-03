@@ -1,10 +1,11 @@
 class Pokemon
   attr_accessor :id, :name, :type, :hp, :db
 
-  def initialize(id:, name:, type:, db:)
+  def initialize(id:, name:, type:, hp:, db:)
     @id = id
     @name = name
     @type = type
+    @hp = 60
     @db = db
   end
 
@@ -15,6 +16,12 @@ class Pokemon
     SQL
 
     db.execute(sql, name, type)
+  end
+
+  def self.find
+    sql = <<-SQL
+      SELECT *
+    SQL
   end
 
 end
