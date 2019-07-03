@@ -12,10 +12,10 @@ describe "Pokemon" do
 
   describe ".initialize" do
     it 'is initialized with keyword arguments of id, name, type and db' do
-      expect(pokemon).to respond_to(id)
-      expect(pokemon).to respond_to(name)
-      expect(pokemon).to respond_to(type)
-      expect(pokemon).to respond_to(db)
+      expect(pokemon).to respond_to(id:)
+      expect(pokemon).to respond_to(name:)
+      expect(pokemon).to respond_to(type:)
+      expect(pokemon).to respond_to(db:)
     end
   end
 
